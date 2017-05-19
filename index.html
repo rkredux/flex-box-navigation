@@ -9,7 +9,12 @@
 <body>
   <div class="wrapper"> 
 
+    <header class="top">
+      <h1><a href="#">Flexbox Demo Page</a></h1>
+    </header>
+
    <nav class="flex-nav">
+     <a href="#" class="toggleNav">Menu</a>
      <ul>
        <li><a href="#">Item 01</a></li>
        <li><a href="#">Item 02</a></li>
@@ -24,8 +29,39 @@
      </ul>
    </nav>
 
-  </div>
+   <section class="hero">
+     <img src="http://lorempixel.com/1000/600" alt="Flexbox demo shot">
+   </section>
 
+   <section class="details">
+     <p>A simple page to understand flexbox concept</p>
+     <p>Let us get started and have a lot of fun. Let's go!</p>
+   </section>
+
+   <section class="signup">
+     <form action="#" class="signup">
+       <input type="text" placeholder="Your Name" >
+       <input type="email" placeholder="Your email" >
+       <input type="submit" value="Sign Me Up!">
+     </form>
+   </section>
+
+   <footer>
+     <p>&copy; Rkredux</p>
+   </footer>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">></script>
+  <script>
+    $(function(){
+      $(".toggleNav").on("click", function(){
+        $(".flex-nav ul").toggleClass("open"); 
+      }); 
+    }); 
+    
+  </script>
 </body>
 </html>
 
