@@ -15,7 +15,7 @@ body{
 a{
 	color: white;
 	font-weight: 100;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	text-decoration: none; 
 	background: rgba(0,0,0,0.2);
 	padding: 20px 5px;
@@ -29,12 +29,41 @@ a:hover{
 	background: rgba(0,0,0,0.3); 
 }
 
+
+.toggleNav{
+	display: none;
+}
+
+
+
+img{
+	width: 100%
+}
+
+
+
 .wrapper{
 	max-width: 1000px; 
 	margin: 0 auto; 
 	padding: 50px;
 
 }
+
+input{
+	padding: 10px;
+	border: 0;
+}
+
+section, footer{
+	text-align: center;
+	background: rgba(0,0,0,0.2);
+	padding: 20px;
+	margin: 20px 0;
+	color: white;
+	font-weight: 100;
+}
+
+
 
 .flex-nav ul{
 	list-style: none;
@@ -71,6 +100,44 @@ a:hover{
 	.flex-nav li{
 		flex-basis: 100%;
 	}
+
+	.wrapper{
+		display:flex;
+		flex-direction: column;	
+	}
+
+	.wrapper > *{
+		order: 100;
+	}
+
+	.flex-nav{
+		order: 1;
+	}
+
+	.toggleNav{
+		display: block;
+	}
+
+	.flex-nav ul{
+		display: none;
+	}
+
+	.flex-nav ul.open{
+		display: flex;
+	}
+
+	.top{
+		order: 2;
+	}
+
+	.details{
+		order: 3;
+	}
+
+	.signup{
+		order: 4;
+	}
+
 }
 
 
